@@ -13,3 +13,22 @@
     width: 100px;
     height: 100px;
 }
+
+.memory-card.-round {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    transform: translateX(110%);
+    background-color: #fff;
+}
+
+.memory-card.-round::after {
+    content: '';
+    top: 35px;
+    position: absolute;
+    z-index: -1;
+    background-color: #d4d4d4;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
