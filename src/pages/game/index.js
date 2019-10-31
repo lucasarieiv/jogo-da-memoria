@@ -1,16 +1,17 @@
-createMemoryCardFront()
-createMemoryCard()
-createMemoryCard()
-createMemoryCard()
-createMemoryCard()
-createMemoryCardFront()
-createMemoryCard()
-createMemoryCard()
+const $root = document.querySelector('#root')
 
-const $memoyCards = document.querySelectorAll('.memory-card')
-$memoyCards.forEach( (e)=> {
+const $cardsWrapper = createCardsWrapper()
+const $memoryCard = createMemoryCard()
+const $memoryCardFront = createMemoryCardFront()
 
-    e.addEventListener("click", (e)=> {
-        console.log(e)
-    }, false)
-})
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCard)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCard)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCard)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCardFront)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCardFront)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCard)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCard)
+$cardsWrapper.insertAdjacentHTML('afterbegin', $memoryCard)
+
+$root.insertAdjacentElement('beforeend', $cardsWrapper)
+

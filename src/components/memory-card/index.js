@@ -1,36 +1,35 @@
 function createMemoryCard() {
-    const $memoryCard = document.createElement('article')
-    $wrapCards.insertBefore($memoryCard, null)
 
-    const $icon = `
-    <img 
-        src="img/icon-collabcode.png"
-        alt="Logo do mascote da CollabCode"
-        class="icon"
-    />
-    `;
+    const $memoryCard = `
+        <article class="memory-card">
+            <img 
+                src="img/icon-collabcode.png"
+                alt="Logo do mascote da CollabCode"
+                class="icon"
+                onClick="handleClick()"
+            />
+        </article>
+    `
 
-    $memoryCard.classList.add('memory-card')
-
-    $memoryCard.insertAdjacentHTML('afterbegin', $icon)
+    return $memoryCard
 }
-
 
 function createMemoryCardFront() {
 
-    const $memoryCardFront = document.createElement('article')
+    const $memoryCardFront = `
+        <article class="memory-card -front">
+            <img 
+                src="img/icon-js.png"
+                alt="Icone livro sobre javascript"
+                class="icon"
+                onClick="handleClick()"
+            />
+        </article>
+    `
 
-    const $iconJs = `
-    <img
-        src="img/icon-js.png"
-        alt="Icone livro sobre javascript"
-        class="icon"
-    />
-    `;
-
-    $memoryCardFront.classList.add('memory-card', '-front')
-    $wrapCards.insertBefore($memoryCardFront, null)
-    
-    $memoryCardFront.insertAdjacentHTML('afterbegin', $iconJs)
-
+    return $memoryCardFront
 }
+
+function handleClick() {
+    console.log('Cartão Sharkão, Yam Yam')
+};
