@@ -1,14 +1,23 @@
 
-function handleClick() {
-    console.log('Cartão Sharkão, Yam Yam')
-};
 
-const $memoryCard = (className) => {
-    const memoryCard = ` 
+const createMemoryCard = className => `
     <article class="memory-card ${className}">
-    <img src="img/icon-collabcode.png" alt="Icone livro sobre javascript" class="icon" onClick="handleClick()" />
+        <img 
+            src="img/icon-collabcode.png"
+            alt="Icone livro sobre javascript"
+            class="icon" onClick="handleClick()"
+        />
     </article> `;
-    
-    return memoryCard
-}
 
+
+const createMemoryCardFront = className => `
+    <article class="memory-card ${className}">
+        <img 
+            src="img/icon-collabcode.png"
+            alt="Icone livro sobre javascript"
+            class="icon" onClick="handleClick()"
+        />
+    </article> `;
+
+
+const handleClick = () => console.log('Aeee')
