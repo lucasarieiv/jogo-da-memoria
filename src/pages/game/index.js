@@ -13,12 +13,24 @@ const memoryCardFront = createMemoryCard(
     '-front'
 );
 
+const memoryCardJava = createMemoryCard(
+    'img/icon-java.png',
+    'Icone do Livro de Java',
+    '-front'
+)
+
+const memoryCardCelular = createMemoryCard(
+    'img/icon-celular.png',
+    'Icone de um Celular',
+    '-front'
+)
+
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardCelular)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardCelular)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardFront)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardFront)
 
