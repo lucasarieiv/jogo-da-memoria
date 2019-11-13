@@ -1,4 +1,4 @@
-const createMemoryCard = (src, alt, nameClass) => { 
+const createMemoryCard = (nameClass,src, alt) => { 
     return `
         <article class="memory-card ${nameClass}">
             <img 
