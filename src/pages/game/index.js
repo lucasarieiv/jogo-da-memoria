@@ -2,48 +2,47 @@ const $root = document.querySelector('#root')
 
 const $cardsWrapper = createCardsWrapper()
 
-const atr = {
-    class: "",
-    src: "",
-    alt: ""
-}
-
-
-const memoryCard = createMemoryCard(
-    atr.class = "",
-    atr.src = "img/icon-collabcode.png",
-    atr.alt = "Gueio o Mascote da Collacode"
+const memoryCardC = createMemoryCard(
+    {
+        nameClass: "-front",
+        src: "img/icon-c.png",
+        alt: "Icone do Livro de C"
+    }
 );
 
-const memoryCardFront = createMemoryCard(
-    atr.class = "-front",
-    atr.src = "img/icon-js.png",
-    atr.alt = "Icone do Livro de Javascript"
+const memoryCardBug = createMemoryCard(
+    {
+        nameClass: "-front",
+        src: "img/icon-bug.png",
+        alt: "Icone de um Inseto"
+    }
+);
+
+
+const memoryCardJS = createMemoryCard(
+    {
+        nameClass: "-front",
+        src: "img/icon-js.png",
+        alt: "Icone do Livro de Javascript"
+    }
 );
 
 const memoryCardJava = createMemoryCard(
-    atr.class = "-front",
-    atr.src = "img/icon-java.png",
-    atr.alt = "Icone do Livro de Java"
+    {
+        nameClass: "-front",
+        src: "img/icon-php.png",
+        alt: "Icone Livro de Php"
+    }
 )
 
-const memoryCardCelular = createMemoryCard(
-    atr.class = "-front",
-    atr.src = "img/icon-celular.png",
-    atr.alt = "Icone de um celular"
-)
 
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCard)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardCelular)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardCelular)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardBug)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardBug)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardFront)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardFront)
-
-
-
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
 
 $root.insertAdjacentElement('beforeend', $cardsWrapper)
-
