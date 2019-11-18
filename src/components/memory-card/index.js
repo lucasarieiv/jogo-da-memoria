@@ -15,3 +15,7 @@ const handleClick = () => {
     console.log('aee')
 }
 
+const $link = document.createElement('link')
+
+$link.setAttribute("href","src/components/memory-card/style.css");
+$link.setAttribute("rel","stylesheet")
