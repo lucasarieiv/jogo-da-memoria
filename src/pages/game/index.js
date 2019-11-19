@@ -14,7 +14,6 @@ const memoryCardC = createMemoryCard(
 
 const memoryCardBug = createMemoryCard(
     {
-        nameClass: "-front",
         src: "img/icon-bug.png",
         alt: "Icone de um Inseto"
     }
@@ -22,7 +21,6 @@ const memoryCardBug = createMemoryCard(
 
 const memoryCardJS = createMemoryCard(
     {
-        nameClass: "-front",
         src: "img/icon-js.png",
         alt: "Icone do Livro de Javascript"
     }
@@ -30,20 +28,19 @@ const memoryCardJS = createMemoryCard(
 
 const memoryCardJava = createMemoryCard(
     {
-        nameClass: "-front",
         src: "img/icon-php.png",
         alt: "Icone Livro de Php"
     }
 )
 
 
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardBug)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardBug)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
-$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
+$cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
 
 $root.insertAdjacentElement('beforeend', $cardsWrapper)

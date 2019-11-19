@@ -7,9 +7,15 @@
     
         $style.textContent = `
         .memory-card {
+            width: 155px;
+            height: 155px;
+            position: relative;
+        }
+
+        .memory-card .card {
             cursor: pointer;
-            width: 150px;
-            height: 150px;
+            width: 100%;
+            height: 100%;
             background-color: #f25a70;
             border-radius: 30px;
             display: flex;
@@ -18,14 +24,23 @@
             box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
             position: relative;
             margin-bottom: 15px;
+            position: absolute;
         }
-    
-    
-        .memory-card.-front {
+        
+        .memory-card .card.-front {
             background-color: #fff;
+            display: flex;
+        }
+        
+        .memory-card.-active .card {
+            display: none;
+        }
+
+        .memory-card.-active .card.-front {
+            display: flex;
         }
     
-        .memory-card.-front::before {
+        .memory-card .card.-front::before {
             content: '';
             width: 95px;
             height: 95px;
@@ -34,12 +49,12 @@
             position: absolute;
         }
     
-        .memory-card > .icon {
+        .memory-card .icon {
             width: 100px;
             height: 100px;
         }
     
-        .memory-card.-front > .icon {
+        .memory-card .card.-front > .icon {
             position: absolute;
             transform: translateY(-10px)
         }
@@ -52,29 +67,28 @@
     
         
         return ({src,alt,nameClass}) => `
-        <article class="memory-card ${nameClass}" onClick="handleClick(this)">
+        <div class="memory-card" onClick="handleClick(this)">
+            <article class="card -front">
                 <img 
                     src="${src}"
                     alt="${alt}"
                     class="icon"
                     data-image="${src}"
                 />
-            </article> `
+            </article>
+            <article class="card">
+                <img 
+                    src="img/icon-collabcode.png"
+                    alt="O Mascote da CollabCode, o Gueio"
+                    class="icon"
+                    data-image="${src}"
+                />
+            </article>
+        <div>`
+
         ;
     };
 
     // Functions
 
-    const handleClick = (e) => {
-        const $card = e
-        const img = $card.querySelector('img')
-        const src = img.dataset.image
-    
-
-        if ($card.classList.toggle('-front')) {
-            img.src = src
-        } else {
-            img.src = 'img/icon-collabcode.png'
-        }
-
-    }
+    const handleClick = ($component) => $component.classList.toggle('-active')
