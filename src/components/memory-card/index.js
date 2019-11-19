@@ -50,18 +50,31 @@
 
         console.log('Preparando')
     
-
-        return ({src,alt,nameClass}) => `   
-        <article class="memory-card ${nameClass}">
+        
+        return ({src,alt,nameClass}) => `
+        <article class="memory-card ${nameClass}" onClick="handleClick(this)">
                 <img 
                     src="${src}"
                     alt="${alt}"
-                    class="icon" onClick="handleClick()"
+                    class="icon"
+                    data-image="${src}"
                 />
-            </article> `;
+            </article> `
+        ;
     };
 
     // Functions
-    const handleClick = () => {
-        console.log('aee')
+
+    const handleClick = (e) => {
+        const $card = e
+        const img = $card.querySelector('img')
+        const src = img.dataset.image
+    
+
+        if ($card.classList.toggle('-front')) {
+            img.src = src
+        } else {
+            img.src = 'img/icon-collabcode.png'
+        }
+
     }
