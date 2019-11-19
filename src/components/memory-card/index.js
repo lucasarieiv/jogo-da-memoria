@@ -91,4 +91,21 @@
 
     // Functions
 
-    const handleClick = ($component) => $component.classList.toggle('-active')
+    const handleClick = ($component) => {        
+        $component.classList.toggle('-active')
+        const component = document.querySelectorAll('.-active')
+
+        if (component.length == 3) {
+            component.forEach((e)=> {
+                e.classList.remove('-active')
+            })
+            
+        } else if (component.length == 2) {
+            setTimeout(() => {
+                component.forEach((e)=> {
+                    e.classList.remove('-active')
+                })
+                console.log('Terminou')
+            }, 3000);
+        }
+    }
