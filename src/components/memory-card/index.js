@@ -63,8 +63,6 @@
         
         $head.insertBefore($style, null)
 
-        console.log('Preparando')
-    
         
         return ({src,alt,nameClass}) => `
         <div class="memory-card" onClick="handleClick(this)">
@@ -77,7 +75,7 @@
                 />
             </article>
             <article class="card">
-                <img 
+                <img
                     src="img/icon-collabcode.png"
                     alt="O Mascote da CollabCode, o Gueio"
                     class="icon"
@@ -93,19 +91,4 @@
 
     const handleClick = ($component) => {        
         $component.classList.toggle('-active')
-        const component = document.querySelectorAll('.-active')
-
-        if (component.length == 3) {
-            component.forEach((e)=> {
-                e.classList.remove('-active')
-            })
-            
-        } else if (component.length == 2) {
-            setTimeout(() => {
-                component.forEach((e)=> {
-                    e.classList.remove('-active')
-                })
-                console.log('Terminou')
-            }, 3000);
-        }
     }

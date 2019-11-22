@@ -20,5 +20,14 @@ function createCardsWrapper() {
     `
     $head.insertBefore($style, null)
 
+    
+    $cardsWrapper.addEventListener("click", () => {
+        const $qtdActiveMemoryCard = $cardsWrapper.querySelectorAll('.memory-card.-active').length
+        console.log($qtdActiveMemoryCard)
+
+
+    })
+    
     return $cardsWrapper;
 }
+
