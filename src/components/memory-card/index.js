@@ -36,7 +36,11 @@
             display: none;
         }
 
-        .memory-card.-active .card.-front {
+        .memory-card.-score .card {
+            display: none;
+        }
+
+        .memory-card.-active .card.-front, .memory-card.-score .card.-front {
             display: flex;
         }
     
@@ -71,7 +75,6 @@
                     src="${src}"
                     alt="${alt}"
                     class="icon"
-                    data-image="${src}"
                 />
             </article>
             <article class="card">
@@ -79,7 +82,6 @@
                     src="img/icon-collabcode.png"
                     alt="O Mascote da CollabCode, o Gueio"
                     class="icon"
-                    data-image="${src}"
                 />
             </article>
         <div>`
@@ -90,36 +92,39 @@
     // Functions
 
     const handleClick = $component => {
-
-    if (qtdActiveMemoryCard < 2) {
-        $component.classList.toggle('-active')
-        qtdActiveMemoryCard = 0;
-
-    }
-
-
-        // console.log("@@@@@@@@@@@@@@@@@2", )
-
-        // if (qtdActiveMemoryCard == 1) {
-            
-            // const $activeMemoryCards = document.querySelectorAll('.memory-card.-active')
-    
-            // const $card1 = $activeMemoryCards[0].children[0].children[0].dataset.image
-            // const $card2 = $activeMemoryCards[1].children[0].children[0].dataset.image
         
+        if (!$component.classList.contains('-active')) {
 
-        //     if ($card1 != $card2) {
-        //         setTimeout( () => {
+            if (qtdActiveMemoryCard < 2) {
+                $component.classList.toggle('-active')
+            }
+
+            if (qtdActiveMemoryCard == 1 ) {
+                
+                const $memoryCards = document.querySelectorAll(".memory-card.-active")
+                
+                const $card1 = $memoryCards[0].querySelector('.-front .icon').getAttribute('src')
+                const $card2 = $memoryCards[1].querySelector('.-front .icon').getAttribute('src')
+                
+                if ($card1 === $card2) {
+                    score++;
+                    $memoryCards.forEach( $memoryCard=> {
+                        $memoryCard.classList.add('-score')
+                        $memoryCard.classList.remove('-active')
+                    })
+                    
+                } else {
+                    setTimeout(() => {
+                        const $activeMemoryCards = document.querySelectorAll('.memory-card.-active');
+                        $activeMemoryCards.forEach($memoryCard => {
+                            $memoryCard.classList.remove('-active')
+                        });
     
-        //             $activeMemoryCards.forEach( $memoryCard => {
-        //                 $memoryCard.classList.remove('-active')
-        //             })
-    
-        //             qtdActiveMemoryCard = 0;
-        //         }, 1000);
-        //     } else {
-        //         qtdActiveMemoryCard = 0;
-        //     }
-        
-        // }
+                        qtdActiveMemoryCard = 0;
+                            
+                    }, 1500)
+                }
+                   
+            }
+        }
     }
