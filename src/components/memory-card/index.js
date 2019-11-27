@@ -95,36 +95,43 @@
         
         if (!$component.classList.contains('-active')) {
 
-            if (qtdActiveMemoryCard < 2) {
-                $component.classList.toggle('-active')
-            }
+            activeMemoryCard($component)
+            checkSure()
+        }
+    }
 
-            if (qtdActiveMemoryCard == 1 ) {
+
+    function activeMemoryCard($component) {
+        if (qtdActiveMemoryCard < 2) {
+            $component.classList.add('-active')
+        }
+    }
+
+    function checkSure() {
+        if (qtdActiveMemoryCard == 1 ) {
                 
-                const $memoryCards = document.querySelectorAll(".memory-card.-active")
-                
-                const $card1 = $memoryCards[0].querySelector('.-front .icon').getAttribute('src')
-                const $card2 = $memoryCards[1].querySelector('.-front .icon').getAttribute('src')
-                
-                if ($card1 === $card2) {
-                    score++;
-                    $memoryCards.forEach( $memoryCard=> {
-                        $memoryCard.classList.add('-score')
+            const $activeMemoryCards = document.querySelectorAll(".memory-card.-active")
+            
+            const $card1 = $activeMemoryCards[0].querySelector('.-front .icon').getAttribute('src')
+            const $card2 = $activeMemoryCards[1].querySelector('.-front .icon').getAttribute('src')
+            
+            if ($card1 === $card2) {
+                store.score++;
+                console.log(store.score)
+                $activeMemoryCards.forEach( $memoryCard=> {
+                    $memoryCard.classList.add('-score')
+                    $memoryCard.classList.remove('-active')
+                }) 
+            } else {
+                setTimeout(() => {
+                    $activeMemoryCards.forEach($memoryCard => {
                         $memoryCard.classList.remove('-active')
-                    })
-                    
-                } else {
-                    setTimeout(() => {
-                        const $activeMemoryCards = document.querySelectorAll('.memory-card.-active');
-                        $activeMemoryCards.forEach($memoryCard => {
-                            $memoryCard.classList.remove('-active')
-                        });
-    
-                        qtdActiveMemoryCard = 0;
-                            
-                    }, 1500)
-                }
-                   
+                    });
+
+                    qtdActiveMemoryCard = 0;
+                        
+                }, 1500)
             }
+               
         }
     }

@@ -44,3 +44,4 @@ $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
 $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
 
 $root.insertAdjacentElement('beforeend', $cardsWrapper)
+
