@@ -45,5 +45,6 @@
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
     
     $root.insertAdjacentElement('beforeend', $cardsWrapper)
+    
 
 }) ();    

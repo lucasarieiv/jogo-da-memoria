@@ -1,4 +1,4 @@
-let qtdActiveMemoryCard = 0;
+store.qtdActiveMemoryCard = 0;
 
 function createCardsWrapper() {
 

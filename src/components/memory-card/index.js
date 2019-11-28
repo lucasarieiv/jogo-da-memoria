@@ -100,7 +100,6 @@
         }
     }
 
-
     function activeMemoryCard($component) {
         if (qtdActiveMemoryCard < 2) {
             $component.classList.add('-active')
