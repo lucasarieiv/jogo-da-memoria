@@ -25,12 +25,12 @@ const pointBar = (function () {
     }
 
 
-    module.create = (score) => {
+    module.create = () => {
         module._style()
-        
+
         return `
             <header class="point-bar">
-                <span class="number">${score}</span>
+                <span class="number">0</span>
             </header>
         `
     }

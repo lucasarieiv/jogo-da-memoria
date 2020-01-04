@@ -7,6 +7,8 @@
 
     const $pointBar = pointBar.create();
 
+    const $startBtn = startBtn.create();
+
     const memoryCardC = createMemoryCard(
         {
             nameClass: "-front",
@@ -47,6 +49,7 @@
     
     
     $root.insertAdjacentHTML('afterbegin', $pointBar)
+    $root.insertAdjacentHTML('afterend', $startBtn)
     $root.insertAdjacentElement('beforeend', $cardsWrapper)
 
 }) ();    
