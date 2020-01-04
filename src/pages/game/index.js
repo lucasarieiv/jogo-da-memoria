@@ -4,7 +4,9 @@
     const $cardsWrapper = createCardsWrapper()
     
     const createMemoryCard = memoryCard.create()
-    
+
+    const $pointBar = pointBar.create();
+
     const memoryCardC = createMemoryCard(
         {
             nameClass: "-front",
@@ -24,7 +26,7 @@
         {
             src: "img/icon-js.png",
             alt: "Icone do Livro de Javascript"
-        }
+        } 
     );
     
     const memoryCardJava = createMemoryCard(
@@ -34,7 +36,6 @@
         }
     )
     
-    
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardBug)
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
@@ -44,7 +45,8 @@
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
     
+    
+    $root.insertAdjacentHTML('afterbegin', $pointBar)
     $root.insertAdjacentElement('beforeend', $cardsWrapper)
-    
 
 }) ();    

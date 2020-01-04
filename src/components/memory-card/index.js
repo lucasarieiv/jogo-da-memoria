@@ -20,7 +20,7 @@ const memoryCard = (function(){
             height: 100%;
             background-color: #f25a70;
             border-radius: 30px;
-            display: flex;
+            display: flex;  
             justify-content: center;
             align-items: center;
             box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
@@ -86,9 +86,7 @@ const memoryCard = (function(){
                     class="icon"
                 />
             </article>
-        <div>`
-
-        ;
+        <div>`;
     }; 
 
     module.handleClick = $component => {   
@@ -133,7 +131,7 @@ const memoryCard = (function(){
                
         }
     }
-
+    
     return {
         create: module.create,
         handleClick: module.handleClick
