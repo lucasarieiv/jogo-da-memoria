@@ -113,7 +113,7 @@ const memoryCard = (function(){
             
             if ($card1 === $card2) {
                 store.score++;
-                console.log(store.score)
+                document.querySelector('.point-bar > .number').textContent = store.score;
                 $activeMemoryCards.forEach( $memoryCard=> {
                     $memoryCard.classList.add('-score')
                     $memoryCard.classList.remove('-active')

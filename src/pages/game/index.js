@@ -7,7 +7,7 @@
 
     const $pointBar = pointBar.create();
 
-    const $startBtn = startBtn.create();
+    const $gameButton = gameButton.render();
 
     const memoryCardC = createMemoryCard(
         {
@@ -46,10 +46,9 @@
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardC)
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJava)
     $cardsWrapper.insertAdjacentHTML('afterbegin', memoryCardJS)
-    
-    
-    $root.insertAdjacentHTML('afterbegin', $pointBar)
-    $root.insertAdjacentHTML('afterend', $startBtn)
-    $root.insertAdjacentElement('beforeend', $cardsWrapper)
 
-}) ();    
+    $root.insertAdjacentHTML('afterbegin', $pointBar)
+    $root.insertAdjacentElement('beforeend', $cardsWrapper)
+    $root.insertAdjacentHTML('beforeend', $gameButton)
+})();    
+
