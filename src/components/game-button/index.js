@@ -23,6 +23,15 @@ const gameButton = (function () {
                 font-size: 1.05em;
                 box-shadow: 0 3px 10px rgba(0,0,0, .3)
             }
+
+            .game-block {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background-color: rgba(0,0,0,.5);
+            }
         `
 
         $head.insertBefore($style, null)
@@ -32,6 +41,7 @@ const gameButton = (function () {
         module._style();
 
         return `
+            <section class="game-block"></section> 
             <button class="game-button">Start</button>
         `
     }
