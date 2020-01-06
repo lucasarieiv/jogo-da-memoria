@@ -32,21 +32,51 @@ const gameButton = (function () {
                 top: 0;
                 background-color: rgba(0,0,0,.5);
             }
+
+            .game-button.-active {
+                display: none;
+            }
+
+            .game-block.-active {
+                animation: blockAnimation 350ms cubic-bezier(0,3.33,.76,1.05);
+                transform-origin: center;
+                transform: scale(0)
+            }
+
+            @keyframes blockAnimation {
+                0% {
+                    transform: scale(1)
+                }
+                100% {
+                    transform: scale(0);
+                }
+            }
+
         `
 
         $head.insertBefore($style, null)
     }
-    
+
+
     module.render = () => {
         module._style();
 
         return `
             <section class="game-block"></section> 
-            <button class="game-button">Start</button>
+            <button class="game-button" onClick="gameButton.handleClick()">Start</button>
         `
     }
+    
+    module.handleClick = () => {
+        const $gameBlock = document.querySelector('.game-block')
+        $gameBlock.classList.add('-active')
+        document.querySelector('.game-button').classList.add('-active')
+
+    }
+
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     }
 })();
