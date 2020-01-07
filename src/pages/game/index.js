@@ -2,12 +2,10 @@
     const $root = document.querySelector('#root')
 
     const $cardsWrapper = createCardsWrapper()
-    
     const createMemoryCard = memoryCard.create()
+    const $layerStart = layerStart.render("Start")
 
     const $pointBar = pointBar.create();
-
-    const $gameButton = gameButton.render();
 
     const memoryCardC = createMemoryCard(
         {
@@ -49,6 +47,6 @@
 
     $root.insertAdjacentHTML('afterbegin', $pointBar)
     $root.insertAdjacentElement('beforeend', $cardsWrapper)
-    $root.insertAdjacentHTML('beforeend', $gameButton)
+    $root.insertAdjacentHTML('beforeend', $layerStart)
 })();    
 
