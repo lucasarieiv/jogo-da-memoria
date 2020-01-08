@@ -21,7 +21,12 @@ const gameButton = (function () {
                 border: 3px solid #fffcee;
                 text-transform: uppercase;
                 font-size: 1.05em;
-                box-shadow: 0 3px 10px rgba(0,0,0, .3)
+                box-shadow: 0 3px 10px rgba(0,0,0, .3);
+                transition: opacity 200ms ease-in;
+            }
+
+            .game-button.-disable {
+                opacity: 0;
             }
         `
 
