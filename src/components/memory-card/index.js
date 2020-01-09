@@ -96,7 +96,6 @@ const memoryCard = (function(){
             module._checkSure()
         }
     }
-
     module._activeMemoryCard = $component => {
         if (qtdActiveMemoryCard < 2) {
             $component.classList.add('-active')
@@ -113,6 +112,7 @@ const memoryCard = (function(){
             
             if ($card1 === $card2) {
                 store.score++;
+
                 document.querySelector('.point-bar > .number').textContent = store.score;
                 $activeMemoryCards.forEach( $memoryCard=> {
                     $memoryCard.classList.add('-score')

@@ -14,7 +14,6 @@ const layerStart = (function() {
         if (event.target.classList.contains('transparence-layer')) {
             $component.remove()
         }
-        
     }
 
     module.render = (content) => {

@@ -7,6 +7,7 @@ const gameButton = (function () {
         
         $style.textContent = `
             .game-button {
+                outline: none;
                 cursor: pointer;
                 width: 100px;
                 height: 100px;
@@ -22,11 +23,12 @@ const gameButton = (function () {
                 text-transform: uppercase;
                 font-size: 1.05em;
                 box-shadow: 0 3px 10px rgba(0,0,0, .3);
-                transition: opacity 200ms ease-in;
+                transition: opacity 300ms ease-in, transform 200ms ease-in;
             }
 
             .game-button.-disable {
                 opacity: 0;
+                transform: translate(-50%, -35%) scale(2.5);
             }
         `
 
