@@ -17,16 +17,20 @@ const flatButton = (function() {
                 font-family: inherit;
                 text-transform: uppercase;
             }
+
+            .flatButton.-active {
+                background-color: #f25a70;
+            }
         `
 
         $head.insertAdjacentElement("beforeend", $style)
     }
 
-    module.render = context => {
+    module.render = ({context, variation}) => {
         module._style()
 
         return `
-            <button class="flatButton -active">${context}</button>
+            <button class="flatButton ${variation}">${context}</button>
         `
     };
 
