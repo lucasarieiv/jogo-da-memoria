@@ -12,7 +12,6 @@ const flatButton = (function() {
                 font-size: 24px;
                 font-weight: bold;
                 letter-space: 0.58px;
-                border: none;
                 width: 186px;
                 height: 176px;
                 font-family: inherit;
@@ -27,7 +26,7 @@ const flatButton = (function() {
         module._style()
 
         return `
-            <button class="flatButton">${context}</button>
+            <button class="flatButton -active">${context}</button>
         `
     };
 
