@@ -9,6 +9,10 @@ const pageTitle = (function() {
             .title {
                 width: 100%;
                 text-align: center;
+                text-transform: uppercase;
+                font-size: 24px;
+                font-weight: bold;
+                color: #f25a70;
             }
         `
         $head.insertAdjacentElement("beforeend", $style)
