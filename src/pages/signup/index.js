@@ -1,17 +1,8 @@
 (function() {
     const $root = document.querySelector('#root')
-    const $flatButton = flatButton.render(
-        {
-            context: "Log In",
-            variation: "-active"
-        }
-    )
-    const $flatButtonActive = flatButton.render(
-        {
-            context: "Sign Up",
-        }
-    )
+    const $loginButton = flatButton.render("Log In")
+    const $signUpButton = flatButton.render("Sign Up", true)
 
-    $root.insertAdjacentHTML("afterbegin", $flatButton)
-    $root.insertAdjacentHTML("afterend", $flatButtonActive)
-})()
+    $root.insertAdjacentHTML("beforeend", $loginButton)
+    $root.insertAdjacentHTML("beforeend", $signUpButton)
+})();
