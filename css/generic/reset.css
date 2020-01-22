@@ -1,16 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-#root {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-button {
+button,
+input {
     font-family: inherit;
     border: none;
 }

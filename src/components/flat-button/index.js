@@ -13,7 +13,7 @@ const flatButton = (function() {
                 color: ${active ? "#fff" : "#fffcee" };
                 font-size: 24px;
                 font-weight: bold;
-                width: 50%;
+                width: 49vw;
                 height: 176px;
                 text-transform: uppercase;
             }
