@@ -17,6 +17,11 @@ const flatButton = (function() {
                 height: 176px;
                 text-transform: uppercase;
             }
+
+            .flat-button-${module._id} > span {
+                // background-color:yellow;
+                vertical-align: 100%;
+            }
         `
 
         $head.insertAdjacentElement("beforeend", $style)
@@ -27,7 +32,9 @@ const flatButton = (function() {
         module._style(active)
         
         return `
-            <button class="flat-button-${module._id}">${context}</button>
+            <button class="flat-button-${module._id}">
+                <span>${context}</span>
+            </button>
         `
     };
 
