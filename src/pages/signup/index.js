@@ -9,15 +9,12 @@
     
     const $logoWrapper = logoWrapper.render($logoCollabcode, $titleCollabcode);
 
-    const $inputEmail = inputPage.render(
-        {
-            label: "E-mail",
-            placeholder: "example@email.com"
-        }
-    )
+    const $labelCollabcode = labelCollabcode.render("E-mail");
+    const $inputCollabcode = inputCollabcode.render();
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signUpButton);
     $root.insertAdjacentHTML("beforeend", $logoWrapper)
-    $root.insertAdjacentHTML("beforeend", $inputEmail)
+    $root.insertAdjacentHTML("beforeend", $labelCollabcode)
+    $root.insertAdjacentHTML("beforeend", $inputCollabcode)
 })();

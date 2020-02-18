@@ -101,7 +101,7 @@ const memoryCard = (function(){
             $component.classList.add('-active')
         }
     }
-
+    
     module._checkSure = () => {
         if (qtdActiveMemoryCard == 1 ) {
                 

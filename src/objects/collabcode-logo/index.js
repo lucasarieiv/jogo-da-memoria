@@ -11,6 +11,7 @@ const logoCollabcode = (function() {
                 display: inline-block;
                 border: solid 40px #fff;
                 border-radius: 50%;
+                margin-top: 50px;
             }
 
             .logo-collabcode > .logo {

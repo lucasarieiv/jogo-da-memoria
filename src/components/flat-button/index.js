@@ -9,17 +9,21 @@ const flatButton = (function() {
         
         $style.textContent = `
             .flat-button-${module._id} {
+                box-sizing: border-box;
+                display: inline-flex;
+                justify-content: center;
                 background-color: ${ active ? "#f25a70": "#eae6da"};
                 color: ${active ? "#fff" : "#fffcee" };
                 font-size: 24px;
                 font-weight: bold;
-                width: 49vw;
+                width: 50%;
+                padding-top: 60px;
                 height: 176px;
                 text-transform: uppercase;
+                float: left;
             }
 
             .flat-button-${module._id} > span {
-                // background-color:yellow;
                 vertical-align: 100%;
             }
         `
