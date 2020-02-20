@@ -1,0 +1,22 @@
+{
+  "name": "jogo-da-memoria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasarieiv/jogo-da-memoria.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasarieiv/jogo-da-memoria/issues"
+  },
+  "homepage": "https://github.com/lucasarieiv/jogo-da-memoria#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
