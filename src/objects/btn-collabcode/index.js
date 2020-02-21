@@ -1,4 +1,4 @@
-const buttonCollabcode = (function(){
+const btnCollabcode = (function(){
     const module = {};
     
     module._style = () => {
@@ -6,16 +6,21 @@ const buttonCollabcode = (function(){
         const $style = document.createElement("style");
         
         $style.textContent = `
-            .button-collabcode {
+            .btn-collabcode {
                 background-color: #f25a70;
                 text-transform: uppercase;
                 border: none;
-                padding: 18px;
                 color: #fff;
                 width: 100%;
+                height: 48px;
                 border-radius: 30px;
                 font-weight: bold;
                 font-size: 14px;
+                cursor: pointer;
+            }
+
+            .input-collabcode + .btn-collabcode {
+                margin-top: 45px;
             }
         `
 
@@ -26,7 +31,7 @@ const buttonCollabcode = (function(){
         module._style();
 
         return `
-            <button class="button-collabcode" type="submit">${context}</button>
+            <button class="btn-collabcode" type="submit">${context}</button>
         `
     };
 
