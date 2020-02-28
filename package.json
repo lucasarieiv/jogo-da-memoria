@@ -1,22 +1,26 @@
 {
   "name": "jogo-da-memoria",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Jogo da memoria",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucasarieiv/jogo-da-memoria.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "jogo"
+  ],
+  "author": "Lucas Vieira",
+  "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/lucasarieiv/jogo-da-memoria/issues"
   },
   "homepage": "https://github.com/lucasarieiv/jogo-da-memoria#readme",
-  "dependencies": {
-    "express": "^4.17.1"
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
   }
 }
