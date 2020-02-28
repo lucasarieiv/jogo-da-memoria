@@ -19,7 +19,7 @@ const formCollabcode = (function() {
         const $usernameInput = inputCollabcode.render("text", "Name-example");
     
         const $emailLabel = labelCollabcode.render("E-mail");
-        const $emailInput = inputCollabcode.render("email", "example@email.com");
+        const $emailInput = inputCollabcode.render("email", "");
     
         const $labelPassword = labelCollabcode.render("Password");
         const $confirmLabelPassword = labelCollabcode.render("Confirm password");
