@@ -14,20 +14,21 @@ const formCollabcode = (function() {
         $head.insertAdjacentElement("beforeend", $style);
     }
 
-    module._children = () => {
+    module._children = (form) => {
+
         const $usernameLabel = labelCollabcode.render("Username");
         const $usernameInput = inputCollabcode.render("text", "Name-example");
     
         const $emailLabel = labelCollabcode.render("E-mail");
-        const $emailInput = inputCollabcode.render("email", "");
+        const $emailInput = inputCollabcode.render("email", "example@email.com");
     
         const $labelPassword = labelCollabcode.render("Password");
         const $confirmLabelPassword = labelCollabcode.render("Confirm password");
         const $inputCollabcodePass = inputCollabcode.render("password", "**********");
     
-        const $btnCollabcode = btnCollabcode.render("Submit");
+        const $btnCollabcode = btnCollabcode.render(form ? "Login" : "Submit");
 
-        return `
+        return form == "Signup" ? `
             ${$usernameLabel}
             ${$usernameInput}
             
@@ -41,15 +42,23 @@ const formCollabcode = (function() {
             ${$inputCollabcodePass}
 
             ${$btnCollabcode}
+        `:
+        `
+            ${$emailLabel}
+            ${$emailInput}
+
+            ${$labelPassword}
+            ${$inputCollabcodePass}
+            ${$btnCollabcode}
         `
     }
     
     
-    module.render = () => {
+    module.render = (form) => {
         module._style();
         return `
             <form class="form-collabcode" action="" method="POST">
-                ${module._children()}
+                ${module._children(form)}
             </form>
         `
     };
