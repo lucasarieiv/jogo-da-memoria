@@ -17,14 +17,27 @@ const formCollabcode = (function() {
     module._children = (form) => {
 
         const $usernameLabel = labelCollabcode.render("Username");
-        const $usernameInput = inputCollabcode.render("Name-example");
+        const $usernameInput = inputCollabcode.render({
+            placeholder:"Name-example"
+        });
     
         const $emailLabel = labelCollabcode.render("E-mail");
-        const $emailInput = inputCollabcode.render("example@email.com", "email");
+        const $emailInput = inputCollabcode.render({ 
+            placeholder :"example@email.com",
+            type:"email"
+        });
     
-        const $labelPassword = labelCollabcode.render("Password");
-        const $confirmLabelPassword = labelCollabcode.render("Confirm password");
-        const $inputCollabcodePass = inputCollabcode.render("**********", "password");
+        const $passwordLabel = labelCollabcode.render("Password");
+        const $passwordInput = inputCollabcode.render({
+            placeholder: "**********",
+            type: "password"
+        });
+
+        const $confirmLabelPassword = labelCollabcode.render("Confirm password")
+        const $confirmLabelInput = labelCollabcode.render({
+            placeholder: "**********",
+            type: "password"
+        })
     
         const $btnCollabcode = btnCollabcode.render(form ? "Login" : "Submit");
 
@@ -35,11 +48,11 @@ const formCollabcode = (function() {
             ${$emailLabel}
             ${$emailInput}
 
-            ${$labelPassword}
-            ${$inputCollabcodePass}
+            ${$passwordLabel}
+            ${$passwordInput}
 
             ${$confirmLabelPassword}
-            ${$inputCollabcodePass}
+            ${$confirmLabelInput}
 
             ${$btnCollabcode}
         `:
@@ -47,8 +60,8 @@ const formCollabcode = (function() {
             ${$emailLabel}
             ${$emailInput}
 
-            ${$labelPassword}
-            ${$inputCollabcodePass}
+            ${$passwordLabel}
+            ${$passwordInput} 
             ${$btnCollabcode}
         `
     }
