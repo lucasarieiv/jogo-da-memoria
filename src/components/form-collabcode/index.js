@@ -17,14 +17,14 @@ const formCollabcode = (function() {
     module._children = (form) => {
 
         const $usernameLabel = labelCollabcode.render("Username");
-        const $usernameInput = inputCollabcode.render("text", "Name-example");
+        const $usernameInput = inputCollabcode.render("Name-example");
     
         const $emailLabel = labelCollabcode.render("E-mail");
-        const $emailInput = inputCollabcode.render("email", "example@email.com");
+        const $emailInput = inputCollabcode.render("example@email.com", "email");
     
         const $labelPassword = labelCollabcode.render("Password");
         const $confirmLabelPassword = labelCollabcode.render("Confirm password");
-        const $inputCollabcodePass = inputCollabcode.render("password", "**********");
+        const $inputCollabcodePass = inputCollabcode.render("**********", "password");
     
         const $btnCollabcode = btnCollabcode.render(form ? "Login" : "Submit");
 
