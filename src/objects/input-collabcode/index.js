@@ -3,7 +3,16 @@ const inputCollabcode = (function() {
 
     module.handleClick = (event) => {
         const $img = event.target;
+        
         $img.classList.toggle("-active");
+        const $inputPassword = $img.parentNode.firstElementChild;
+        
+
+        if ($img.classList.contains("-active")) {
+            $inputPassword.type = "text"
+        } else {
+            $inputPassword.type = "password"
+        }
     }
 
     module._style = () => {
