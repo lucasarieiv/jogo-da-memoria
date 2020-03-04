@@ -1,19 +1,6 @@
 const inputCollabcode = (function() {
     const module = {}
 
-    module.handleClick = (event) => {
-        const $img = event.target;
-        
-        $img.classList.toggle("-active");
-        const $inputPassword = $img.parentNode.firstElementChild;
-
-        if ($img.classList.contains("-active")) {
-            $inputPassword.type = "text"
-        } else {
-            $inputPassword.type = "password"
-        }
-    }
-
     module._style = () => {
         const $head = document.querySelector("head");
         const $style = document.createElement("style");
@@ -36,12 +23,12 @@ const inputCollabcode = (function() {
         $head.insertAdjacentElement("beforeend", $style)
     }
 
-    module.render = ({placeholder = "", type = "text"}) => {
+    module.render = ({id = "", placeholder = "", type = "text"}) => {
         module._style();
 
         return `
             <input
-                ${type == 'password' ? 'id="password"': ''}
+                id="${id}"
                 class="input-collabcode"
                 type="${type}"
                 placeholder="${placeholder}"
