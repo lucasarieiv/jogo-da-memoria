@@ -28,6 +28,8 @@ const formLogin = (function() {
             type: "password"
         });
 
+        const $eyeCollabcode = eyeCollabcode.render();
+
         const $linkCollab = linkCollab.render({
             href: "#",
             content: "Forget password ?"
@@ -35,13 +37,15 @@ const formLogin = (function() {
         });
     
         const $btn = btnCollabcode.render("Login");
-
         return `
             ${$emailLabel}
             ${$emailInput}
 
             ${$passwordLabel}
             ${$passwordInput}
+            
+            ${$eyeCollabcode}
+
             ${$linkCollab}
             
             ${$btn}
