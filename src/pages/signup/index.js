@@ -8,7 +8,7 @@
     const $titleCollabcode = titleCollabcode.render('Welcome!');
     
     const $logoWrapper = logoWrapper.render($logoCollabcode, $titleCollabcode);
-    const $formSignUp = formCollabcode.render();
+    const $formSignUp = formSignup.render();
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $signUpButton);

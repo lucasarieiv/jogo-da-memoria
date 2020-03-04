@@ -1,4 +1,5 @@
 (function (){
+
     const $root = document.querySelector("#root");
 
     const $loginButton = flatButton.render("Log In", true);

@@ -34,12 +34,12 @@ const formSignup = (function() {
         });
 
         const $confirmLabelPassword = labelCollabcode.render("Confirm password")
-        const $confirmLabelInput = labelCollabcode.render({
+        const $confirmInput = inputCollabcode.render({
             placeholder: "**********",
             type: "password"
         })
     
-        const $btnCollabcode = btnCollabcode.render(form ? "Login" : "Submit");
+        const $btn = btnCollabcode.render("Submit");
 
         return `
             ${$usernameLabel}
@@ -52,9 +52,9 @@ const formSignup = (function() {
             ${$passwordInput}
 
             ${$confirmLabelPassword}
-            ${$confirmLabelInput}
+            ${$confirmInput}
 
-            ${$btnCollabcode}
+            ${$btn}
         `
     }
     

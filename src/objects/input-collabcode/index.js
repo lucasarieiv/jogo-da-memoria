@@ -6,7 +6,6 @@ const inputCollabcode = (function() {
         
         $img.classList.toggle("-active");
         const $inputPassword = $img.parentNode.firstElementChild;
-        
 
         if ($img.classList.contains("-active")) {
             $inputPassword.type = "text"
@@ -38,16 +37,24 @@ const inputCollabcode = (function() {
                 margin-top: 30px;
             }
 
+            .input-container + .btn-collabcode {
+                margin-top: 45px;
+            }
+
             .input-hidden {
+                cursor: pointer;
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 right: 0;
                 opacity: .5;
+                transform: scale(1);
+                transition: transform 300ms ease;
             }
 
             .input-hidden.-active {
                 opacity: 1;
+                transform: scale(1.1);
             }
 
         `
@@ -61,7 +68,7 @@ const inputCollabcode = (function() {
         return `
             <div class="input-container">
                 <input class="input-collabcode" type="${type}" placeholder="${placeholder}"/>
-                ${type == 'password' ? '<img onClick="inputCollabcode.handleClick(event)" class="input-hidden" src="../../../img/hidden.png" alt="Icone olho">' : ''}
+                ${type == 'password' ? '<img onClick="inputCollabcode.handleClick(event)" class="input-hidden" src="../../../img/eye.png" alt="Icone olho">' : ''}
             </div>
         `
     }
