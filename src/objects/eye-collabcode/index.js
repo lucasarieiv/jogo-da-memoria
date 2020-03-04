@@ -21,15 +21,22 @@ const eyeCollabcode = (function() {
         $head.insertAdjacentElement("beforeend", $style)
     };
 
+    module.handleClick = ()=> {
+        alert('Aee')
+    }
+
     module.render = () => {
         module._style();
         
         return `
-            <label class="eye-collabcode">Mostrar senha</label>
+            <label 
+                class="eye-collabcode"
+                onClick="eyeCollabcode.handleClick()">Mostrar senha</label>
         `;
     }
     
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     }
 })();
