@@ -1,4 +1,3 @@
-
 (function (){
     const $root = document.querySelector("#root");
 
@@ -7,7 +6,7 @@
 
     const $logoCollabcode = logoCollabcode.render();
     const $titleCollabcode = titleCollabcode.render("Hello!");
-
+    
     const $logoWrapper = logoWrapper.render($logoCollabcode, $titleCollabcode);
     const $formLogin = formLogin.render();
     

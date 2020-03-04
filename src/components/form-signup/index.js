@@ -14,7 +14,7 @@ const formSignup = (function() {
         $head.insertAdjacentElement("beforeend", $style);
     }
 
-    module._children = (form) => {
+    module._children = () => {
 
         const $usernameLabel = labelCollabcode.render("Username");
         const $usernameInput = inputCollabcode.render({
@@ -41,7 +41,7 @@ const formSignup = (function() {
     
         const $btnCollabcode = btnCollabcode.render(form ? "Login" : "Submit");
 
-        return form == "Signup" ? `
+        return `
             ${$usernameLabel}
             ${$usernameInput}
             
@@ -55,23 +55,15 @@ const formSignup = (function() {
             ${$confirmLabelInput}
 
             ${$btnCollabcode}
-        `:
-        `
-            ${$emailLabel}
-            ${$emailInput}
-
-            ${$passwordLabel}
-            ${$passwordInput} 
-            ${$btnCollabcode}
         `
     }
     
     
-    module.render = (form) => {
+    module.render = () => {
         module._style();
         return `
             <form class="form-collabcode" action="" method="POST">
-                ${module._children(form)}
+                ${module._children()}
             </form>
         `
     };
