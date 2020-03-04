@@ -18,18 +18,19 @@ const eyeCollabcode = (function() {
             
         `;
 
-        $head.insertAdjacentElement("beforeend", $style)
+        $head.insertAdjacentElement("beforeend", $style);
     };
 
     module.handleClick = ()=> {
-        alert('Aee')
+        console.log('Aee')
     }
 
     module.render = () => {
         module._style();
         
         return `
-            <label 
+            <label
+                for="password"
                 class="eye-collabcode"
                 onClick="eyeCollabcode.handleClick()">Mostrar senha</label>
         `;
