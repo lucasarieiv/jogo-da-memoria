@@ -18,6 +18,8 @@ const eyeCollabcode = (function() {
                 cursor: pointer;
                 opacity: .5;
                 transition: opacity 200ms linear;
+                margin-left: auto;
+                transform: translateY(-140%);
             }
 
             .eye-collabcode.-active {
