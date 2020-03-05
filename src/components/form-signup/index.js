@@ -29,13 +29,13 @@ const formSignup = (function() {
     
         const $passwordLabel = labelCollabcode.render("Password");
         const $passwordInput = inputCollabcode.render({
-            placeholder: "**********",
+            placeholder: "Digite sua senha",
             type: "password"
         });
 
         const $confirmLabelPassword = labelCollabcode.render("Confirm password")
         const $confirmInput = inputCollabcode.render({
-            placeholder: "**********",
+            placeholder: "Confirme sua senha",
             type: "password"
         })
     

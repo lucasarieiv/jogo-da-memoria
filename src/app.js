@@ -1,3 +1,11 @@
 (function () {
-    login();
+
+    const {hash} = window.location;
+
+    if (hash === "#/signup") {
+        signup();
+    } else {
+        login();
+    }
+
 })();
