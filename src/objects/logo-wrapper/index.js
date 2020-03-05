@@ -6,9 +6,10 @@ const logoWrapper = (function() {
         const $style = document.createElement("style");
 
         $style.textContent = `
-            .logo-wrapper {
+            .avatar-wrapper {
                 text-align: center;
                 transform: translateY(-25%);
+                pointer-events: none;
             }
         `;
 
@@ -19,10 +20,10 @@ const logoWrapper = (function() {
         module._style();
 
         return `
-            <div class="logo-wrapper">
+            <div class="avatar-wrapper">
                 ${$children.join("")}
             </div>
-        `
+        `;
     };
 
     return {

@@ -21,6 +21,7 @@ const flatButton = (function() {
                 height: 176px;
                 text-transform: uppercase;
                 float: left;
+                cursor: pointer;
             }
 
             .flat-button-${module._id} > span {
@@ -31,18 +32,24 @@ const flatButton = (function() {
         $head.insertAdjacentElement("beforeend", $style)
     }
 
-    module.render = (context = "", active = false ) => {
+    module.handleClick = path => {
+        window.location.hash = `#/${path}`
+    }
+
+    module.render = (context = "", active = false, path = "") => {
         module._id++
         module._style(active)
         
         return `
-            <button class="flat-button-${module._id}">
-                <span>${context}</span>
-            </button>
+            <button 
+                class="flat-button-${module._id}" 
+                onclick="flatButton.handleClick('${path}')" 
+                ><span>${context}</span></button>
         `
     };
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     }
 })()

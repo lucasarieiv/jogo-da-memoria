@@ -39,7 +39,7 @@ const formSignup = (function() {
             type: "password"
         })
     
-        const $btn = btnCollabcode.render("Submit");
+        const $btn = btnCollabcode.render({context: "Submit", path: "login"});
 
         return `
             ${$usernameLabel}

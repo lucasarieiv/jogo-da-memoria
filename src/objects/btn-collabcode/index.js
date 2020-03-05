@@ -27,16 +27,25 @@ const btnCollabcode = (function(){
         $head.insertAdjacentElement("beforeend", $style)
     };
 
-    module.render = context => {
+    module.handleClick = (event, path) => {
+        event.preventDefault();
+        window.location.hash = `#/${path}`
+    }
+
+    module.render = ({context = "", path = ""}) => {
         module._style();
 
         return `
-            <button class="btn-collabcode" type="submit">${context}</button>
-        `
+            <input 
+                class="btn-collabcode"
+                type="submit"
+                value="${context}"
+                onclick="btnCollabcode.handleClick(event, '${path}')">`
     };
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     }
 
 })();

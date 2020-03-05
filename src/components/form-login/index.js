@@ -37,7 +37,7 @@ const formLogin = (function() {
 
         });
     
-        const $btn = btnCollabcode.render("Login");
+        const $btn = btnCollabcode.render({context: "Login", path: "game"});
         return `
             ${$emailLabel}
             ${$emailInput}
