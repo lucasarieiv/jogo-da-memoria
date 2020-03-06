@@ -9,7 +9,7 @@ const transparenceLayer = (function() {
                 background-color: rgba(0,0,0,.5);
                 position: absolute;
                 width: 100vw;
-                height: 100vh;
+                height: 100%;
                 top: 0;
                 transition: opacity 200ms 400ms linear;
             }
