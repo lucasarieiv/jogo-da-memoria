@@ -4,11 +4,11 @@
 
     const paths = [];
     console.log(paths)
-    paths[`${hash}`] = error;
+    paths[`${hash}`] = status404;
     paths[""] = login;
-    paths["#/game"] = game;
     paths["#/login"] = login;
     paths["#/signup"] = signup;
-
+    paths["#/game"] = game;
+    
     paths[hash]();
 })();
