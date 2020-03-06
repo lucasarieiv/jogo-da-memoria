@@ -4,6 +4,7 @@
 
     const paths = [];
     paths[""] = login;
+    paths["#/game"] = game;
     paths["#/login"] = login;
     paths["#/signup"] = signup;
 
