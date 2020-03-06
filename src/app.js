@@ -9,8 +9,7 @@
     paths["#/game"] = game;
     paths["#/login"] = login;
     paths["#/signup"] = signup;
-    console.log("Minha hash é " + hash)
 
     paths[hash]();
-
+    console.log(game)
 })();
