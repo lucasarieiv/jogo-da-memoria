@@ -11,5 +11,4 @@
     paths["#/signup"] = signup;
 
     paths[hash]();
-    console.log(game)
 })();
